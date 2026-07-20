@@ -1,4 +1,4 @@
-name: PvZ-Portable Android armv7
+name: PvZ-Portable Android (armeabi-v7a)
 
 on:
   push:
