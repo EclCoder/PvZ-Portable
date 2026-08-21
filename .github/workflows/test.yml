@@ -11,10 +11,12 @@ jobs:
       contents: write
 
     steps:
-      - name: Delete branches
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - uses: actions/checkout@v4
+        with:
+          ref: b4f1ba0
+          fetch-depth: 0
+
+      - name: Create branch
         run: |
-          gh api \
-          "/repos/${{ github.repository }}/commits/b4f1ba0" \
-          --jq '.sha'
+          git switch -c release-0.2.1
+          git push origin release-0.2.1
