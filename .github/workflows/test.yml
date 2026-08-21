@@ -14,4 +14,5 @@ jobs:
         run: |
           git push origin --delete 32-bit-test
           git push origin --delete 1437
-          
+          git push origin --delete buttons
+          git push origin --delete clamp-to-std-clamp
