@@ -16,7 +16,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh api --method DELETE \
-            "/repos/${{ github.repository }}/git/refs/heads/32-bit-test"
+            "/repos/${{ github.repository }}/git/refs/heads/fix/demo-rand-checkpoint"
 
           gh api --method DELETE \
             "/repos/${{ github.repository }}/git/refs/heads/credit-sound"
@@ -25,4 +25,4 @@ jobs:
             "/repos/${{ github.repository }}/git/refs/heads/demo-file-naming"
 
           gh api --method DELETE \
-            "/repos/${{ github.repository }}/git/refs/heads/clamp-to-std-clamp"
+            "/repos/${{ github.repository }}/git/refs/heads/fix-mindcontrolled-color"
