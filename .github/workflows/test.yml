@@ -11,12 +11,12 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: b4f1ba08ab9eed8788bbb3f0d5f75c75d9c06fa6
-          fetch-depth: 0
-
       - name: Create branch
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git switch -c release-0.2.1
-          git push origin release-0.2.1
+          gh api \
+          --method POST \
+          "/repos/${{ github.repository }}/git/refs" \
+          -f ref="refs/heads/release-0.2.1" \
+          -f  sha="b4f1ba08ab9eed8788bbb3f0d5f75c75d9c06fa6"
