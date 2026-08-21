@@ -15,5 +15,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh api --method DELETE \
-            "/repos/${{ github.repository }}/git/refs/heads/zombatar-cleanroom-from-ResoddedFramework"
+          gh api \
+          "/repos/${{ github.repository }}/commits/b4f1ba0" \
+          --jq '.sha'
