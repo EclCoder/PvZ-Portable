@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: b4f1ba0
+          ref: b4f1ba08ab9eed8788bbb3f0d5f75c75d9c06fa6
           fetch-depth: 0
 
       - name: Create branch
