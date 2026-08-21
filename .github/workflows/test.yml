@@ -1,4 +1,4 @@
-name: Delete branch
+name: Delete branches
 
 on:
   workflow_dispatch:
@@ -6,13 +6,23 @@ on:
 jobs:
   delete:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
 
     steps:
-      - name: Delete branch
+      - name: Delete branches
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          git push origin --delete 32-bit-test
-          git push origin --delete 1437
-          git push origin --delete buttons
-          git push origin --delete clamp-to-std-clamp
+          gh api --method DELETE \
+            "/repos/${{ github.repository }}/git/refs/heads/32-bit-test"
+
+          gh api --method DELETE \
+            "/repos/${{ github.repository }}/git/refs/heads/1437"
+
+          gh api --method DELETE \
+            "/repos/${{ github.repository }}/git/refs/heads/buttons"
+
+          gh api --method DELETE \
+            "/repos/${{ github.repository }}/git/refs/heads/clamp-to-std-clamp"
