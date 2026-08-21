@@ -12,4 +12,6 @@ jobs:
     steps:
       - name: Delete branch
         run: |
-          git push origin
+          git push origin --delete 32-bit-test
+          git push origin --delete 1437
+          
