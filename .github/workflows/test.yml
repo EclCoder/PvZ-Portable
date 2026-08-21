@@ -16,13 +16,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh api --method DELETE \
-            "/repos/${{ github.repository }}/git/refs/heads/fix/demo-rand-checkpoint"
+            "/repos/${{ github.repository }}/git/refs/heads/fix/fix-update-counter-signedness"
 
           gh api --method DELETE \
-            "/repos/${{ github.repository }}/git/refs/heads/credit-sound"
+            "/repos/${{ github.repository }}/git/refs/heads/refactor-string_view"
 
           gh api --method DELETE \
-            "/repos/${{ github.repository }}/git/refs/heads/demo-file-naming"
+            "/repos/${{ github.repository }}/git/refs/heads/touch-system"
 
           gh api --method DELETE \
-            "/repos/${{ github.repository }}/git/refs/heads/fix-mindcontrolled-color"
+            "/repos/${{ github.repository }}/git/refs/heads/unicode-input"
