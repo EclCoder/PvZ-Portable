@@ -19,4 +19,4 @@ jobs:
           --method POST \
           "/repos/${{ github.repository }}/git/refs" \
           -f ref="refs/heads/release-0.2.1" \
-          -f  sha="b4f1ba08ab9eed8788bbb3f0d5f75c75d9c06fa6"
+          -f sha="b4f1ba08ab9eed8788bbb3f0d5f75c75d9c06fa6"
