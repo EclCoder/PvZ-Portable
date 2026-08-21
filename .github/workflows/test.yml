@@ -19,10 +19,10 @@ jobs:
             "/repos/${{ github.repository }}/git/refs/heads/32-bit-test"
 
           gh api --method DELETE \
-            "/repos/${{ github.repository }}/git/refs/heads/1437"
+            "/repos/${{ github.repository }}/git/refs/heads/credit-sound"
 
           gh api --method DELETE \
-            "/repos/${{ github.repository }}/git/refs/heads/buttons"
+            "/repos/${{ github.repository }}/git/refs/heads/demo-file-naming"
 
           gh api --method DELETE \
             "/repos/${{ github.repository }}/git/refs/heads/clamp-to-std-clamp"
